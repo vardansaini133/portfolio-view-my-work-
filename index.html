@@ -4,9 +4,275 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Hello World</h1>
-    <p>this is a trial Website</p>
+    <div class="bg-layer" aria-hidden="true">
+    <span class="blob blob-1"></span>
+    <span class="blob blob-2"></span>
+    <span class="blob blob-3"></span>
+    <div class="grid-overlay"></div>
+  </div>
+
+  <!-- ===== Progress bar (pure CSS scroll-linked) ===== -->
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+  <!-- ===== Header / Nav (checkbox hack, no JS) ===== -->
+  <header class="site-header">
+    <a href="#home" class="logo">
+      <span class="logo-mark">AR</span>
+      <span class="logo-text">Alex&nbsp;Rivera</span>
+    </a>
+
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" hidden />
+    <label for="nav-toggle" class="nav-burger" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </label>
+
+    <nav class="site-nav">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#work">Work</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ===== HERO ===== -->
+    <section id="home" class="hero">
+      <div class="hero-inner">
+        <p class="hero-tag reveal" style="--d: .05s">
+          <span class="dot"></span> Available for freelance work
+        </p>
+
+        <h1 class="hero-title">
+          <span class="line reveal" style="--d: .15s">I build</span>
+          <span class="line gradient-text reveal" style="--d: .3s">interfaces</span>
+          <span class="line reveal" style="--d: .45s">that move people.</span>
+        </h1>
+
+        <p class="hero-sub reveal" style="--d: .6s">
+          Front-end developer &amp; motion-focused UI designer. I turn static
+          mockups into fast, accessible, delightfully animated experiences.
+        </p>
+
+        <p class="hero-typed reveal" style="--d: .75s">
+          <span class="typed-prefix">Currently:</span>
+          <span class="typed">
+            <span class="typed-word">React &amp; TypeScript</span>
+            <span class="typed-word">Design Systems</span>
+            <span class="typed-word">CSS Animation</span>
+          </span>
+        </p>
+
+        <div class="hero-cta reveal" style="--d: .9s">
+          <a href="#work" class="btn btn-primary">
+            View my work
+            <span class="btn-arrow" aria-hidden="true">&rarr;</span>
+          </a>
+          <a href="#contact" class="btn btn-ghost">Let's talk</a>
+        </div>
+
+        <ul class="hero-stats reveal" style="--d: 1.05s">
+          <li><strong data-count="7">7</strong><span>Years coding</span></li>
+          <li><strong>48</strong><span>Projects shipped</span></li>
+          <li><strong>12</strong><span>Happy clients</span></li>
+        </ul>
+      </div>
+
+      <!-- Floating decorative shapes -->
+      <div class="hero-visual" aria-hidden="true">
+        <div class="orb orb-a"></div>
+        <div class="orb orb-b"></div>
+        <div class="code-card">
+          <div class="code-card-bar"><i></i><i></i><i></i></div>
+          <pre><code><span class="c-key">@keyframes</span> float {
+  <span class="c-num">0%</span>   { <span class="c-prop">transform</span>: translateY(0); }
+  <span class="c-num">100%</span> { <span class="c-prop">transform</span>: translateY(-18px); }
+}</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section id="about" class="section about">
+      <div class="section-head">
+        <span class="section-kicker">01 — About</span>
+        <h2 class="section-title">Designer's eye,<br />engineer's brain</h2>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-card reveal" style="--d: .1s">
+          <p>
+            I'm Alex, a front-end developer based in Lisbon. For the last seven
+            years I've been shipping web products for startups and studios —
+            mostly design systems, marketing sites and dashboards where motion
+            is part of the product, not decoration.
+          </p>
+          <p>
+            I care about the details nobody asks for: a 120ms easing curve, a
+            focus ring that actually looks good, a layout that doesn't break at
+            320px. Everything here runs on HTML and CSS alone.
+          </p>
+        </div>
+
+        <ul class="about-facts">
+          <li class="reveal" style="--d: .2s">
+            <span class="fact-icon">◎</span>
+            <div><strong>Based in</strong><span>Lisbon, Portugal (UTC+1)</span></div>
+          </li>
+          <li class="reveal" style="--d: .3s">
+            <span class="fact-icon">◇</span>
+            <div><strong>Focus</strong><span>UI engineering &amp; web animation</span></div>
+          </li>
+          <li class="reveal" style="--d: .4s">
+            <span class="fact-icon">✳</span>
+            <div><strong>Toolbox</strong><span>React, TypeScript, Figma, GSAP</span></div>
+          </li>
+          <li class="reveal" style="--d: .5s">
+            <span class="fact-icon">↗</span>
+            <div><strong>Open to</strong><span>Contract &amp; part-time roles</span></div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== SKILLS ===== -->
+    <section id="skills" class="section skills">
+      <div class="section-head">
+        <span class="section-kicker">02 — Skills</span>
+        <h2 class="section-title">What I work with</h2>
+      </div>
+
+      <div class="skills-grid">
+        <article class="skill-card reveal" style="--d: .1s">
+          <h3>Front-end</h3>
+          <ul class="bars">
+            <li>
+              <span class="bar-label"><span>HTML &amp; CSS</span><b>98%</b></span>
+              <span class="bar"><i style="--fill: 98%"></i></span>
+            </li>
+            <li>
+              <span class="bar-label"><span>JavaScript</span><b>92%</b></span>
+              <span class="bar"><i style="--fill: 92%"></i></span>
+            </li>
+            <li>
+              <span class="bar-label"><span>React / TypeScript</span><b>88%</b></span>
+              <span class="bar"><i style="--fill: 88%"></i></span>
+            </li>
+          </ul>
+        </article>
+
+        <article class="skill-card reveal" style="--d: .25s">
+          <h3>Design &amp; Motion</h3>
+          <ul class="bars">
+            <li>
+              <span class="bar-label"><span>UI / UX Design</span><b>90%</b></span>
+              <span class="bar"><i style="--fill: 90%"></i></span>
+            </li>
+            <li>
+              <span class="bar-label"><span>CSS Animation</span><b>95%</b></span>
+              <span class="bar"><i style="--fill: 95%"></i></span>
+            </li>
+            <li>
+              <span class="bar-label"><span>Figma &amp; Prototyping</span><b>85%</b></span>
+              <span class="bar"><i style="--fill: 85%"></i></span>
+            </li>
+          </ul>
+        </article>
+
+        <article class="skill-card reveal" style="--d: .4s">
+          <h3>Tooling &amp; Practice</h3>
+          <ul class="chips">
+            <li>Git</li><li>Vite</li><li>Tailwind</li><li>Accessibility</li>
+            <li>Performance</li><li>Testing</li><li>Storybook</li><li>CI/CD</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== WORK ===== -->
+    <section id="work" class="section work">
+      <div class="section-head">
+        <span class="section-kicker">03 — Selected work</span>
+        <h2 class="section-title">Projects I'm proud of</h2>
+      </div>
+
+      <div class="work-grid">
+        <article class="project reveal" style="--d: .1s">
+          <div class="project-thumb thumb-1" aria-hidden="true"><span>◆</span></div>
+          <div class="project-body">
+            <h3>Orbit Dashboard</h3>
+            <p>Analytics suite for a SaaS platform — 60+ components, dark mode, fully keyboard navigable.</p>
+            <ul class="tags"><li>React</li><li>TypeScript</li><li>Charts</li></ul>
+            <span class="project-link">Case study <i>&rarr;</i></span>
+          </div>
+        </article>
+
+        <article class="project reveal" style="--d: .25s">
+          <div class="project-thumb thumb-2" aria-hidden="true"><span>▲</span></div>
+          <div class="project-body">
+            <h3>Bloom Commerce</h3>
+            <p>Headless storefront for a plant brand. Cut LCP from 4.1s to 1.2s on mobile.</p>
+            <ul class="tags"><li>Next.js</li><li>Shopify</li><li>Perf</li></ul>
+            <span class="project-link">Case study <i>&rarr;</i></span>
+          </div>
+        </article>
+
+        <article class="project reveal" style="--d: .4s">
+          <div class="project-thumb thumb-3" aria-hidden="true"><span>●</span></div>
+          <div class="project-body">
+            <h3>Pulse Design System</h3>
+            <p>A 120-token design system with documented motion guidelines adopted by four product teams.</p>
+            <ul class="tags"><li>Design System</li><li>Storybook</li><li>Docs</li></ul>
+            <span class="project-link">Case study <i>&rarr;</i></span>
+          </div>
+        </article>
+
+        <article class="project reveal" style="--d: .55s">
+          <div class="project-thumb thumb-4" aria-hidden="true"><span>✦</span></div>
+          <div class="project-body">
+            <h3>Nomad Travel Notes</h3>
+            <p>Offline-first travel journal PWA. 30k monthly active readers, works on 2G.</p>
+            <ul class="tags"><li>PWA</li><li>IndexedDB</li><li>CSS</li></ul>
+            <span class="project-link">Case study <i>&rarr;</i></span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section id="contact" class="section contact">
+      <div class="contact-card reveal" style="--d: .1s">
+        <span class="section-kicker">04 — Contact</span>
+        <h2>Have a project in mind?</h2>
+        <p>
+          I'm taking on new contract work for the next quarter. Tell me what
+          you're building and I'll reply within two business days.
+        </p>
+        <div class="contact-actions">
+          <a href="mailto:hello@example.com" class="btn btn-primary">
+            hello@example.com
+            <span class="btn-arrow" aria-hidden="true">&rarr;</span>
+          </a>
+          <a href="#home" class="btn btn-ghost">Back to top ↑</a>
+        </div>
+        <ul class="socials">
+          <li><a href="#home">GitHub</a></li>
+          <li><a href="#home">LinkedIn</a></li>
+          <li><a href="#home">Dribbble</a></li>
+          <li><a href="#home">Read.cv</a></li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 Alex Rivera. Built with plain HTML &amp; CSS.</p>
+    <a href="#home" class="to-top" aria-label="Back to top">↑</a>
+  </footer>
 </body>
 </html>
